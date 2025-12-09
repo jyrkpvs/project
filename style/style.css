@@ -1,0 +1,336 @@
+@import url(font.css);
+@import url(keyframes.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Montserrat;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1100px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.btn {
+  position: fixed;
+  bottom: 30px;
+  right: 0;
+  background: #000;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  transform: rotate(270deg);
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  background: #666666;
+  border: none;
+}
+
+.header__nav {
+  animation-name: nav_anim;
+  animation-play-state: running;
+  animation-duration: 1s;
+}
+.header__nav-link {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+}
+.header__nav-link-links > a {
+  color: gray;
+  transition: 0.3s ease-in-out;
+}
+.header__nav-link-links > a:hover {
+  color: #000;
+}
+.header__nav-link-links > a button {
+  height: 30px;
+  width: 90px;
+  background: #000;
+  border: none;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+.header__nav-link-links > a button:hover {
+  background: none;
+  border: 2px solid #000;
+  color: #000;
+}
+.header-content {
+  height: 700px;
+  background: url(../img/header_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+}
+.header-content > h1 {
+  font-size: 55px;
+  color: #fff;
+}
+.header-content > p {
+  font-size: 20px;
+  color: #fff;
+}
+.header-content > div {
+  display: flex;
+  gap: 20px;
+}
+.header-content > div > button {
+  height: 36px;
+  width: 215px;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+.header-content > div > button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.main-content {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.main-content-block {
+  height: 500px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.main-content-block > p {
+  color: #fff;
+}
+.main-content-block > p:nth-of-type(1) {
+  font-size: 35px;
+}
+.main-content-block > p:nth-of-type(2) {
+  font-size: 16px;
+}
+.main-content-block > p:nth-of-type(3) {
+  font-size: 16px;
+}
+.main-content-block > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 125px;
+}
+.main-content-block > div > a {
+  color: #fff;
+}
+.main-content-block:nth-of-type(1) {
+  background: url(../img/main_bg-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main-content-block:nth-of-type(2) {
+  background: url(../img/main_bg-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main-mascara {
+  height: 720px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.main-mascara > h2 {
+  color: #fff;
+  font-size: 38px;
+}
+.main-mascara > p {
+  width: 532px;
+  color: #fff;
+  font-size: 16px;
+}
+.main-info {
+  height: 730px;
+  background: url(../img/main-info.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+.main-info > h3 {
+  font-size: 38px;
+  color: #fff;
+}
+.main-info > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.main-info > div > button {
+  height: 36px;
+  width: 215px;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  transition: 0.3s ease-in-out;
+}
+.main-info > div > button:hover {
+  background: #fff;
+  color: #000;
+}
+.main-story {
+  height: 430px;
+  background: url(../img/main-lucy.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.main-story > p:nth-of-type(1) {
+  font-size: 35px;
+  margin-left: 200px;
+}
+.main-story > p:nth-of-type(2) {
+  width: 350px;
+  font-size: 16px;
+  margin-left: 300px;
+  color: #666666;
+}
+.main-story > a {
+  color: #000;
+  margin-left: 45px;
+  font-size: 14px;
+}
+.main-font {
+  height: 320px;
+  width: 1280px;
+}
+
+.footer {
+  height: 435px;
+  background: #000;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-content-info {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 60px;
+}
+.footer-content-info > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.footer-content-info > ul > li:nth-of-type(1) > a {
+  color: #fff;
+}
+.footer-content-info > ul > li > a {
+  color: #666666;
+  transition: 0.3s ease-in-out;
+}
+.footer-content-info > ul > li > a:hover {
+  color: #FFFFFF;
+}
+.footer-content-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 40px;
+}
+.footer-content-sign > p:nth-of-type(1) {
+  color: #fff;
+}
+.footer-content-sign > p:nth-of-type(2) {
+  color: #666666;
+}
+.footer-content-sign > p:nth-of-type(3) {
+  color: #666666;
+}
+.footer-content-sign > form {
+  display: flex;
+}
+.footer-content-sign > form > input {
+  height: 38px;
+  width: 230px;
+  border: 2px solid #fff;
+  background: none;
+}
+.footer-content-sign > form > input:nth-of-type(2) {
+  height: 38px;
+  width: 135px;
+  background: #fff;
+  color: #666666;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+.footer-content-sign > form > input:nth-of-type(2):hover {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.footer-content-sign > div {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.footer-content-sign > div i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 15px;
+}/*# sourceMappingURL=style.css.map */
